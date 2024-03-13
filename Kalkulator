@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kalkulator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body>
+
+    <h2>Kalkulator Tambah Kurang</h2>
+
+    <div class="container">
+        <div class="form-container">
+          <label for="bil1">Bilangan 1 :</label>
+          <input type="text" id="bil1"><br><br>
+    
+          <label for="bil2">Bilangan 2 :</label>
+          <input type="text" id="bil2"><br><br>
+    
+          <button onclick="add()">Tambah (+)</button>
+          <button onclick="subtract()">Kurang (-)</button><br><br>
+          <label for="result">Hasil :</label>
+      <div class="result-container">
+        <input type="text" id="result" readonly>
+    </div>      
+
+    <script>
+        function add() {
+            var bil1 = parseFloat(document.getElementById("bil1").value);
+            var bil2 = parseFloat(document.getElementById("bil2").value);
+            var hasil = bil1 + bil2;
+            document.getElementById("result").value = hasil;
+        }
+
+        function subtract() {
+            var bil1 = parseFloat(document.getElementById("bil1").value);
+            var bil2 = parseFloat(document.getElementById("bil2").value);
+            var hasil = bil1 - bil2;
+            document.getElementById("result").value = hasil;
+        }
+    </script>
+</body>
+</html>
